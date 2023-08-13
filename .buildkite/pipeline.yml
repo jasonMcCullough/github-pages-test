@@ -1,0 +1,8 @@
+steps:
+  - name: ":docker: Docker Build"
+    command: "docker-compose build"
+    
+  - wait
+  
+  - name: ":node::t-rex: Native Build"
+    command: "npm ci & npm update docusaurus & npm run build"

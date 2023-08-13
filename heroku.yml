@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: docker run -dp 3000:3000 docusaurus-example --build-arg locale=heroku
