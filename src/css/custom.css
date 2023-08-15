@@ -6,7 +6,20 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
+
+  /* Ensures that the navbar is seamless */
+  --ifm-navbar-shadow: 0px;
+
+  /* --ifm-navbar-padding-horizontal: 300px; */
+  --ifm-navbar-link-color: #ffffff;
+
+  --ifm-font-color-base: #ffffff;
+
+  /* Updates 'main' background fill */
+  --ifm-background-surface-color: #393e46;
+  --ifm-background-color:#222831;
+
+  --ifm-color-primary: #393e46;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
