@@ -7,10 +7,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+
+import CottageIcon from '@mui/icons-material/Cottage';
+import EngineeringIcon from '@mui/icons-material/Engineering';
+import ChatIcon from '@mui/icons-material/Chat';
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -36,19 +38,53 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <ListItemButton to="/github-pages-test/">
+                <ListItemIcon>
+                  <CottageIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Home" />
+              </ListItemButton>
+            </ListItemIcon>
+            <ListItemText />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <ListItemButton to="/github-pages-test/projects">
+                <ListItemIcon>
+                  <EngineeringIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="My Projects" />
+              </ListItemButton>
+            </ListItemIcon>
+            <ListItemText />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <ListItemButton to="/github-pages-test/blog">
+                <ListItemIcon>
+                  <ChatIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="My Blog" />
+              </ListItemButton>
+            </ListItemIcon>
+            <ListItemText />
+          </ListItemButton>
+        </ListItem>
       </List>
       <Divider />
-      <List>
+      {/* <List>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
@@ -59,7 +95,7 @@ export default function TemporaryDrawer() {
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </Box>
   );
 
