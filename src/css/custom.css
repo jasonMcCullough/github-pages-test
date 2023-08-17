@@ -23,7 +23,10 @@
   --ifm-background-surface-color: #393e46;
   --ifm-background-color:#222831;
 
-  --ifm-color-primary: #393e46;
+  --ifm-code-background:#393e46;
+
+  --ifm-color-primary: #ffffff;
+  --ifm-link-color: #8b8c8f;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
