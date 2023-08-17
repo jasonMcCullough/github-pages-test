@@ -34,7 +34,5 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
-    /* <Socials /></> */
-    /* <Menu /></> */
   );
 }

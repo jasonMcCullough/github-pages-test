@@ -10,6 +10,10 @@
   /* Ensures that the navbar is seamless */
   --ifm-navbar-shadow: 0px;
 
+  /* Essentially hides the navbar */
+  --ifm-navbar-height: 0px;
+  --ifm-navbar-padding-vertical: 0px;
+
   /* --ifm-navbar-padding-horizontal: 300px; */
   --ifm-navbar-link-color: #ffffff;
 

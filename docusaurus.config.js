@@ -61,6 +61,16 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // navbar: {
+      //   items: [
+      //     {
+      //       to: '/docs',
+      //       label: '≡',
+      //       position: 'left',
+      //       //className: 'button button--secondary button--lg'
+      //     },
+      //   ],
+      // }
+      // navbar: {
       //   // title: 'Lorem ipsum',
       //   // logo: {
       //   //   alt: 'logo',
