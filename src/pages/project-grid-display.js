@@ -5,39 +5,39 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import { Link } from 'react-router-dom';
+import styles from '../components/HomepageFeatures/styles.module.css';
 
 export default function TitlebarImageList() {
   return (
-      <ImageList sx={{ width: 1000, height: 410 }}>
-
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <Link to={`/projects/${item.href}`} target="_blank" rel="noreferrer">
-              <img
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-                width={`1000`}
-                height={`400`}
+        <ImageList sx={{ width: 1250, height: 310}} cols={3}>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <Link to={`/projects/${item.href}`} target="_blank" rel="noreferrer">
+                <img
+                  src={`${item.img}?w=248&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  width={`1000`}
+                  height={`300`}
+                />
+              </Link>
+              <ImageListItemBar
+                title={item.title}
+                subtitle={item.subtitle}
+                actionIcon={``}
+              // actionIcon={
+              //   <IconButton
+              //     sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+              //     aria-label={`info about ${item.title}`}
+              //   >
+              //     <InfoIcon />
+              //   </IconButton>
+              // }
               />
-            </Link>
-            <ImageListItemBar
-              title={item.title}
-              subtitle={item.subtitle}
-              actionIcon={``}
-            // actionIcon={
-            //   <IconButton
-            //     sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-            //     aria-label={`info about ${item.title}`}
-            //   >
-            //     <InfoIcon />
-            //   </IconButton>
-            // }
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
+            </ImageListItem>
+          ))}
+        </ImageList>
   );
 }
 
@@ -54,5 +54,11 @@ const itemData = [
     title: 'Donec sed leo quis',
     subtitle: 'Maecenas laoreet elementum sem, a viverra dui laoreet elementum.',
     href: 'project2',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+    title: 'Nunc quis pulvinar massa',
+    subtitle: 'Cras congue nisi sit amet diam accumsan, at lobortis nulla pulvinar.',
+    href: 'project3',
   },
 ];

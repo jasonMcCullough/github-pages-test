@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 import Accordion from './accordion.js';
 import Dialog from './dialog.js';
 import Socials from './socials.js';
-import Menu from './menu.js';
+import Menu from '../menu.js';
 
 export default function HomepageFeatures() {
   return (
